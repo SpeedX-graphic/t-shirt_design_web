@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - T-Shirt Designs by SpeedX</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=ND+logos&family=Vegan+Style&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 87px;
+        }
+
+        nav {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff4d4d;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 120px auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-section {
+            background-color: #333;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+		#home-link {
+    color: #FF0000; /* Set the color to #FF0000 */
+}
+        .contact-form button {
+            padding: 10px;
+            background-color: #FF0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff4d4d;
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: #FF0000;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+        }
+
+        footer {
+            background-color: #FF0000;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Modal CSS */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+        }
+
+        .modal-content {
+            background-color: #000;
+            margin: 15% auto;
+            padding: 30px;
+            border: 3px solid #FF0000;
+            width: 50%;
+            max-width: 500px;
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .close {
+            color: #FF0000;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff4d4d;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                padding: 10px 0;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .container {
+                margin-top: 110px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                height: 60px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            .modal-content {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="logo.png" alt="SpeedX Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" id="home-link">Contact</a>
+            <a href="social.html">Social</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to discuss a project, please get in touch. I’m available on Fiverr and Facebook, and I look forward to working with you!</p>
+        <form class="contact-form" name="submit-to-google-sheet">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" name="submit">Send Message</button>
+        </form>
+    </section>
+</div>
+
+<!-- Modal HTML -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Your message has been sent successfully!</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 SpeedX. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz26XGbvkU5zMV48eK1MpIWOaJpR2K6u36g1dZzlcIqCDY2yPXGG_mWJ5-RjhApBUH8/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const modal = document.getElementById('successModal')
+    const closeBtn = document.querySelector('.close')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                console.log('Success!', response)
+                form.reset() // Reset form after submission
+                modal.style.display = 'block' // Show the modal
+            })
+            .catch(error => console.error('Error!', error.message))
+    })
+
+    // Close the modal when the user clicks the close button
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none'
+    })
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none'
+        }
+    })
+</script>
+
+</body>
+</html>

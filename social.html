@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social - T-Shirt Designs by [Your Name]</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+      header {
+            background-color: #000;
+            color: #fff;
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .logo {
+            height: 87px;
+        }
+        nav {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            border-radius: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff4d4d;
+        }
+    
+
+
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 110px auto;
+            animation: fadeInUp 0.8s forwards;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .social-section {
+            background-color: #333;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-section h2 {
+            color: #FF0000;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .social-section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .social-section ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-section a {
+            color: #fff;
+          
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .social-section a:hover {
+            color: #FF0000;
+        }
+
+        .social-section li::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-section .fiverr::before {
+            background-image: url('fiverr.png'); /* Add Fiverr icon */
+        }
+
+        .social-section .facebook::before {
+            background-image: url('facebook.png'); /* Add Facebook icon */
+        }
+#home-link {
+    color: #FF0000; /* Set the color to #FF0000 */
+}
+
+        footer {
+            background-color: #FF0000;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0 15px;
+                font-size: 1em;
+            }
+
+            .container {
+                margin-top: 118px;
+                padding: 20px;
+            }
+
+            .social-section {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                height: 50px;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            .social-section h2 {
+                font-size: 1.5em;
+            }
+
+            .social-section ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="logo.png" alt="SpeedX Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+         <a href="social.html" id="home-link">Social</a>
+
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <section class="social-section">
+        <h2>Connect with Us</h2>
+        <p>Follow us on social media to see my latest designs and updates and order our designs from fiverr.
+		</p>
+        <ul>
+            <li class="fiverr"><a href="https://www.fiverr.com/speedx_202" target="_blank">Fiverr</a></li>
+            <li class="facebook"><a href="https://www.facebook.com/profile.php?id=61563904403243 " target="_blank">Facebook</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 SpeedX. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
